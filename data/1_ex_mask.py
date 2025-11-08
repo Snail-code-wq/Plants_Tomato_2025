@@ -4,44 +4,40 @@ import cv2
 import numpy as np
 
 
-# 函数1：提取番茄及其掩码
+# 
 def extract_tomato(image_path):
-    # 读取图像
+    # 
     img = cv2.imread(image_path)
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-    # 定义红色的范围
-    # lower_red1 = np.array([0, 80, 80])
-    # upper_red1 = np.array([17, 255, 255])
-    # lower_red2 = np.array([160, 100, 100])
-    # upper_red2 = np.array([179, 255, 255])
 
-    # big红
+
+    # red
     lower_red1 = np.array([0, 75, 75])
     upper_red1 = np.array([190, 255, 255])
     lower_red2 = np.array([160, 100, 100])
     upper_red2 = np.array([179, 255, 255])
 
-    # 黑
+    # black
     # lower_red1 = np.array([0, 42, 20])
     # upper_red1 = np.array([200, 255, 255])
     # lower_red2 = np.array([160, 100, 100])
     # upper_red2 = np.array([179, 255, 255])
 
-    # 暗红
+    # 
     lower_red1 = np.array([0, 60, 0])
     upper_red1 = np.array([180, 255, 255])
     lower_red2 = np.array([160, 100, 100])
     upper_red2 = np.array([179, 255, 255])
 
 
-    # # 定义黄色的范围
+    # yello
     # lower_red1 = np.array([0, 50, 0])
     # upper_red1 = np.array([37, 255, 255])
     # lower_red2 = np.array([160, 100, 100])
     # upper_red2 = np.array([179, 255, 255])
 
-    # 定义橙色的范围
+    # orange
     # lower_red1 = np.array([0, 65, 0])
     # upper_red1 = np.array([25, 255, 255])
     # lower_red2 = np.array([160, 100, 100])
@@ -161,4 +157,5 @@ input_folder = r'D:\deep\data\scar'
 output_folder = r"D:\deep\data\scar_cut"
 
 process_folder(input_folder, output_folder)
+
 
