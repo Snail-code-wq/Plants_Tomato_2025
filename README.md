@@ -25,7 +25,7 @@ This repository contains tomato images, polygon annotations for the `locule` and
 Original images using the date-and-batch naming convention follow this format:
 
 ```text
-<month>_<day>_image_<batch>_<view>.<extension>
+<month>_<day>_image_<batch>_<tomato_id>.<extension>
 ```
 
 For example, `7_28_image_1_2.png` means:
@@ -35,9 +35,9 @@ For example, `7_28_image_1_2.png` means:
 | `7_28` | Acquisition date: July 28 |
 | `image` | Image identifier in this naming convention |
 | `1` | Tomato batch 1 |
-| `2` | Capture/view index within that batch; images of the same batch were captured at different positions or heights |
+| `2` | Tomato number 2 within batch 1 |
 
-The batch identifier links images of the same tomato batch. The view index identifies a capture within that batch, and the date prefix records the month and day. Preserve these components when organizing images to retain their acquisition context.
+The date prefix records the acquisition month and day. The batch identifier specifies the tomato batch, and the final number identifies an individual tomato within that batch.
 
 ## Annotated images and augmentation
 
